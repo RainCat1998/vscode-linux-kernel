@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "defines": [
+                "__KERNEL__",
+                "CONFIG_X86_X32_ABI",
+                "CONFIG_AS_CFI=1",
+                "CONFIG_AS_CFI_SIGNAL_FRAME=1",
+                "CONFIG_AS_CFI_SECTIONS=1",
+                "CONFIG_AS_SSSE3=1",
+                "CONFIG_AS_AVX=1",
+                "CONFIG_AS_AVX2=1",
+                "CONFIG_AS_AVX512=1",
+                "CONFIG_AS_SHA1_NI=1",
+                "CONFIG_AS_SHA256_NI=1",
+                "CC_USING_FENTRY",
+                "KBUILD_MODNAME=\"hello_module\"",
+                "MODULE"
+            ],
+            "includePath": [
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/include/uapi",
+                "${workspaceFolder}/include/generated",
+                "${workspaceFolder}/include/generated/uapi",
+                "${workspaceFolder}/arch/x86/include",
+                "${workspaceFolder}/arch/x86/include/uapi",
+                "${workspaceFolder}/arch/x86/include/generated",
+                "${workspaceFolder}/arch/x86/include/generated/uapi",
+                "${workspaceFolder}/arch/x86/kvm"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": [
+                "-include",
+                "${workspaceFolder}/include/linux/kconfig.h",
+                "-include",
+                "${workspaceFolder}/include/linux/compiler_types.h"
+            ],
+            "cppStandard": "gnu++17"
+        }
+    ],
+    "version": 4
+}
